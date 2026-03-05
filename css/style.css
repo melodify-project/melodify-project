@@ -1,0 +1,568 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* VARIABLES */
+:root{
+    --fondo:#121212;
+    --secundario:#0D1B2A;
+    --azul:#1E90FF;
+    --azul-hover:#187bcd;
+    --texto:#FFFFFF;
+    --texto-sec:#B3B3B3;
+}
+
+/* BODY */
+body{
+    font-family:'Poppins', sans-serif;
+    background:var(--fondo);
+    color:var(--texto);
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:var(--secundario);
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    font-size:26px;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--azul);
+}
+
+.icono{
+    background:var(--azul);
+    border-radius:50%;
+    padding:8px;
+    margin-right:10px;
+}
+
+/* MENU */
+.menu-container{
+    position:relative;
+}
+
+.menu-btn{
+    background:var(--azul);
+    color:white;
+    border:none;
+    font-size:24px;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    right:0;
+    top:50px;
+    background:var(--secundario);
+    width:170px;
+    padding:10px;
+    border-radius:10px;
+}
+
+.menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:8px;
+    border-radius:6px;
+}
+
+.menu a:hover{
+    background:var(--azul);
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(to right,#0D1B2A,#121212);
+}
+
+/* SECCIONES FLEX */
+.seccion-flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 50px;
+    gap:40px;
+}
+
+.seccion-texto{
+    flex:1;
+}
+
+/* IMAGEN DERECHA */
+
+.seccion-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 50px; /* Más espacio entre imagen y texto */
+}
+
+/* contenedor*/
+.seccion-imagen {
+    flex: 1; /* Para que ocupe el mismo espacio que el texto */
+    max-width: 500px;
+}
+
+.seccion-imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Mantiene la proporción sin deformarse */
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+/* Efecto para que el usuario sepa que es un video (clicable) */
+.seccion-imagen img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px var(--azul);
+    cursor: pointer;
+}
+
+.seccion-texto {
+    flex: 1;
+}
+
+
+/* BACKGROUND SECUNDARIO */
+.bg-secundario{
+    background:var(--secundario);
+}
+
+/* GRID CARDS */
+/* ESTRUCTURA DE SECCIONES Y GRID */
+section {
+    padding: 60px 50px; /* Esto da el "aire" o espacio en los costados */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Aumentamos un poco el espacio entre tarjetas */
+    margin-top: 30px;
+}
+
+
+/* CARD */
+.card{
+    background:var(--secundario);
+    padding:25px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* BOTONES */
+.btn{
+    background:var(--azul);
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    display:inline-block;
+    transition:.3s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:var(--azul-hover);
+}
+
+/* FORMULARIO */
+.formulario{
+    width:90%;
+    max-width:500px;
+    margin:60px auto;
+    padding:30px;
+    background:var(--secundario);
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    background:var(--secundario);
+    color:white;
+    margin-top:8px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus{
+    outline:2px solid var(--azul);
+}
+
+/* ESTILOS ESPECÍFICOS PARA EL FORMULARIO TIPO TARJETA */
+
+.form-section {
+    display: flex;
+    justify-content: center; /* Centra la tarjeta horizontalmente */
+    align-items: center;     /* Centra la tarjeta verticalmente */
+    padding: 60px 20px;
+    min-height: 80vh;
+}
+
+.formulario-card {
+    max-width: 450px;       /* Ancho similar a las de géneros */
+    width: 100%;
+    text-align: left;       /* Alineamos el texto del form a la izquierda */
+}
+
+.formulario-card h2, .formulario-card p {
+    text-align: center;     /* Pero el título y texto siguen centrados */
+}
+
+.img-formulario {
+    margin-bottom: 20px;    /* Espacio entre imagen y título */
+}
+
+/* Estilos para los campos dentro de la tarjeta */
+.formulario-card form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.formulario-card label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: var(--azul);
+}
+
+.formulario-card input, 
+.formulario-card select, 
+.formulario-card textarea {
+    background: #1a2a3a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    margin-top: 5px;
+    font-family: inherit;
+}
+
+.formulario-card input:focus {
+    outline: none;
+    border-color: var(--azul);
+}
+
+.formulario-card .btn {
+    margin-top: 25px;
+    width: 100%;
+}
+
+/* ESTILO PARA LAS IMÁGENES DE ARTISTAS */
+.artista-img {
+    width: 100%;          /* Ocupa todo el ancho de la tarjeta */
+    height: 200px;        /* Altura fija para que todas se vean iguales */
+    object-fit: cover;    /* Recorta la imagen para que no se estire feo */
+    border-radius: 12px;  /* Bordes redondeados para que combine con la card */
+    margin-bottom: 15px;  /* Espacio entre la foto y el nombre del artista */
+    display: block;
+}
+
+/* PERFIL ARTISTA */
+.perfil-artista{
+    padding:60px;
+}
+
+.perfil-header{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.perfil-header img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+.perfil-seccion{
+    margin-top:40px;
+}
+
+/* RELACIONADOS */
+.relacionados-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+}
+
+.relacionado-card{
+    text-align:center;
+}
+
+.relacionado-card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* GENEROS */
+.contenedor-generos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:50px;
+}
+
+.tarjeta-genero{
+    background:var(--secundario);
+    padding:20px;
+    border-radius:30px;
+    text-align:center;
+    transition:.3s;
+}
+
+.tarjeta-genero:hover{
+    transform:translateY(-6px);
+}
+
+.tarjeta-genero button{
+    background:var(--azul);
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:15px;
+}
+
+.tarjeta-genero button:hover{
+    background:var(--azul-hover);
+    transform:scale(1.05);
+}
+
+.tarjeta-genero img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/*Subpagina dd generos*/
+.icono-genero{
+    text-align:center;
+    padding:30px;
+}
+
+.playlist-principal button{
+    background:var(--azul);
+    border:none;
+    padding:12px 25px;
+    margin:10px;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.playlist-principal button:hover{
+    background:var(--azul-hover);
+    transform:translateY(-3px);
+}
+
+.icono-genero img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:30%;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* ESTILOS ESPECÍFICOS PARA EL TEST */
+
+.test {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.test h1 {
+    text-align: center;
+    color: var(--azul);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.test p {
+    text-align: center;
+    color: var(--texto-sec);
+    margin-bottom: 40px;
+}
+
+/* Reutilizamos el estilo de formulario pero lo ajustamos */
+.formulario {
+    background: var(--secundario);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%; /* Para que ocupe el ancho del contenedor .test */
+}
+
+.test h2 {
+    font-size: 1.2rem;
+    color: var(--azul);
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.test label {
+    display: block;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.test select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #1a2a3a;
+    color: white;
+    border: 1px solid #333;
+    margin-top: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.test select:focus {
+    outline: none;
+    border-color: var(--azul);
+}
+
+.test .btn {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* Estilo para el cuadro de resultado */
+#resultado {
+    background: linear-gradient(135deg, var(--azul), #6a11cb);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* TABLA BILLBOARD */
+.tabla-billboard{
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:var(--secundario);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.tabla-billboard th{
+    background:var(--azul);
+    padding:12px;
+}
+
+.tabla-billboard td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #222;
+}
+
+/* Resaltar el primer lugar */
+.tabla-billboard tbody tr:first-child {
+    background: rgba(30, 144, 255, 0.2); /* Fondo azul sutil */
+    font-weight: bold;
+    color: var(--azul);
+}
+
+/* Efecto hover en las filas */
+.tabla-billboard tbody tr:hover {
+    background: #1a2a3a;
+    transition: 0.3s;
+}
+
+
+/* GRAFICA */
+.grafica-container{
+    width:90%;
+    max-width:1000px;
+    height:400px;
+    margin:40px auto;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:var(--secundario);
+    margin-top:50px;
+    color:var(--texto-sec);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    header{
+        flex-direction:right;
+        gap:15px;
+    }
+
+    .seccion-flex{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .seccion-imagen{
+        width:100%;
+    }
+
+    .perfil-header{
+        flex-direction:column;
+        text-align:center;
+    }
+    
+    
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Artistas - Melodify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <span class="icono">🎵</span>
+        Melo<span>dif</span>y
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="generos.html">Géneros</a>
+            <a href="test.html">Test</a>
+            <a href="top.html">Top Billboard</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <h2>Artistas Destacados</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="img/olivia.jpg" alt="Olivia Rodrigo" class="artista-img">
+            <h3>Olivia Rodrigo</h3>
+            <p>Cantante y compositora estadounidense reconocida por su estilo pop alternativo.</p>
+            <a href="olivia.html" class="btn">Ver perfil</a>
+        </div>
+
+        <div class="card">
+            <img src="img/bad-bunny.jpg" alt="Bad Bunny" class="artista-img">
+            <h3>Bad Bunny</h3>
+            <p>Uno de los mayores exponentes del reguetón y la música urbana latina.</p>
+            <a href="#" class="btn">Ver perfil</a>
+        </div>
+
+        <div class="card">
+            <img src="img/taylor.jpg" alt="Taylor Swift" class="artista-img">
+            <h3>Taylor Swift</h3>
+            <p>Artista internacional conocida por su evolución del country al pop global.</p>
+            <a href="#" class="btn">Ver perfil</a>
+        </div>
+
+        <div class="card">
+            <img src="img/theweeknd.jpg" alt="The Weeknd" class="artista-img">
+            <h3>The Weeknd</h3>
+            <p>Cantante canadiense famoso por su estilo R&B moderno y synthpop.</p>
+            <a href="#" class="btn">Ver perfil</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Melodify | Portal Musical Educativo
+</footer>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

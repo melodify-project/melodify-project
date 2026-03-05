@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>K-Pop | Género Musical</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <span class="icono">🎵</span>
+        Melo<span>dif</span>y
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="generos.html">Géneros</a>
+            <a href="test.html">Test</a>
+            <a href="top.html">Top Billboard</a>
+        </div>
+    </div>
+    </header>
+            <section style="text-align: center; padding-top: 40px;"><h1>K-Pop</h1>
+        <p>El fenómeno musical global nacido en Corea del Sur</p>
+        </section>
+
+    <main>
+
+        <!-- ICONO / IMAGEN -->
+        <section class="icono-genero">
+            <img src="img/kpop.jpg" alt="Icono Kpop">
+        </section>
+
+        <!-- HISTORIA -->
+        <section class="historia">
+            <h2>Historia del K-Pop</h2>
+            <p>
+                El K-Pop (Korean Pop) nació en Corea del Sur en los años 90 con la influencia 
+                de grupos como Seo Taiji and Boys. Con el paso del tiempo, el género evolucionó 
+                combinando pop occidental, hip-hop, R&B y música electrónica.
+            </p>
+            <p>
+                En la década de 2010, el K-Pop se volvió un fenómeno mundial gracias a 
+                las redes sociales y plataformas digitales, conquistando mercados 
+                en América, Europa y Asia.
+            </p>
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+        <section class="caracteristicas">
+            <h2>Características</h2>
+            <ul>
+                <li>Coreografías sincronizadas y llamativas</li>
+                <li>Grupos formados por agencias de entretenimiento</li>
+                <li>Alta producción audiovisual</li>
+                <li>Fandoms organizados y muy activos</li>
+                <li>Mezcla de varios géneros musicales</li>
+            </ul>
+        </section>
+
+        <!-- ARTISTA REPRESENTANTE -->
+        <section class="artista-representante">
+            <h2>Artista Representante</h2>
+            <img src="img/bts.jpg" alt="BTS">
+            <h3>BTS</h3>
+            <p>
+                Uno de los grupos más influyentes del K-Pop a nivel mundial. 
+                Han roto múltiples récords y han llevado el género a escenarios globales.
+            </p>
+        </section>
+
+        <!-- DATOS CURIOSOS -->
+        <section class="datos-curiosos">
+            <h2>Datos Curiosos</h2>
+            <ul>
+                <li>Los idols entrenan durante años antes de debutar.</li>
+                <li>Los fandoms tienen nombres oficiales (ej: ARMY).</li>
+                <li>Los lightsticks son parte esencial de los conciertos.</li>
+                <li>Corea del Sur considera el K-Pop parte de su cultura exportable.</li>
+            </ul>
+        </section>
+
+        <!-- GENEROS MAS ESCUCHADOS -->
+        <section class="generos-relacionados">
+            <h2>Géneros Más Escuchados Relacionados</h2>
+
+            <div class="genero-item">
+                <h3>K-Hip Hop</h3>
+                <a href="https://open.spotify.com/search/khiphop" target="_blank">
+                    <button>Escuchar Playlist en Spotify</button>
+                </a>
+            </div>
+
+            <div class="genero-item">
+                <h3>K-R&B</h3>
+                <a href="https://open.spotify.com/search/krnb" target="_blank">
+                    <button>Escuchar Playlist en Spotify</button>
+                </a>
+            </div>
+
+            <div class="genero-item">
+                <h3>K-Indie</h3>
+                <a href="https://open.spotify.com/search/kindie" target="_blank">
+                    <button>Escuchar Playlist en Spotify</button>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- PLAYLIST PRINCIPAL -->
+        <section class="playlist-principal">
+            <h2>Escucha K-Pop</h2>
+
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX9tPFwDMOaN1?si=x3rB044vRZSXmiIW2PM5kA" target="_blank">
+                <button>Spotify</button>
+            </a>
+
+            <a href="https://music.apple.com/" target="_blank">
+                <button>Apple Music</button>
+            </a>
+
+            <a href="https://music.youtube.com/" target="_blank">
+                <button>YouTube Music</button>
+            </a>
+        </section>
+            <footer>
+        <p>    © 2026 Melodify | Portal Musical Educativo</p>
+    </footer>
+
+    </main>
+<script>
+const menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+
+menuBtn.addEventListener("click", () => {
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+});
+</script>
+</body>
+</html>

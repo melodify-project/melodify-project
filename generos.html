@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Géneros Musicales</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <span class="icono">🎵</span>
+        Melo<span>dif</span>y
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="generos.html">Géneros</a>
+            <a href="test.html">Test</a>
+            <a href="top.html">Top Billboard</a>
+        </div>
+    </div>
+    </header>
+    <section style="text-align: center; padding-top: 40px;"><h1>Explora los Géneros Musicales</h1>
+        <p>Descubre los estilos más populares</p>
+        </section>
+
+    <main class="contenedor-generos">
+
+        <!-- KPOP -->
+        <div class="tarjeta-genero">
+            <img src="img/kpop.jpg" alt="Icono Kpop">
+            <h2>K-Pop</h2>
+            <p>Género originario de Corea del Sur que mezcla pop, hip-hop y coreografías llamativas.</p>
+            <a href="kpop.html">
+                <button>Ver más</button>
+            </a>
+        </div>
+
+        <!-- POP -->
+        <div class="tarjeta-genero">
+            <img src="img/pop.png" alt="Icono Pop">
+            <h2>Pop</h2>
+            <p>Estilo musical comercial con melodías pegajosas y gran presencia mundial.</p>
+            <a href="pop.html">
+                <button>Ver más</button>
+            </a>
+        </div>
+
+        <!-- ROCK -->
+        <div class="tarjeta-genero">
+            <img src="img/rock.png" alt="Icono Rock">
+            <h2>Rock</h2>
+            <p>Caracterizado por guitarras eléctricas, batería potente y actitud rebelde.</p>
+            <a href="rock.html">
+                <button>Ver más</button>
+            </a>
+        </div>
+
+        <!-- REGGAETON -->
+        <div class="tarjeta-genero">
+            <img src="img/reggaeton.png" alt="Icono Reggaeton">
+            <h2>Reggaetón</h2>
+            <p>Ritmo urbano latino con dembow y sonidos electrónicos modernos.</p>
+            <a href="reggaeton.html">
+                <button>Ver más</button>
+            </a>
+        </div>
+
+        <!-- RAP -->
+        <div class="tarjeta-genero">
+            <img src="img/rap.png" alt="Icono Rap">
+            <h2>Rap / Hip-Hop</h2>
+            <p>Género urbano basado en rimas, ritmo y cultura callejera.</p>
+            <a href="rap.html">
+                <button>Ver más</button>
+            </a>
+        </div>
+
+    </main>
+        <footer>
+        <p>    © 2026 Melodify | Portal Musical Educativo</p>
+    </footer>
+    
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    // Verificamos si el menú está oculto o visible
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+
+
+</body>
+</html>

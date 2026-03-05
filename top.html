@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Billboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<header>
+    <div class="logo">
+        <span class="icono">🎵</span>
+        Melo<span>dif</span>y
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="generos.html">Géneros</a>
+            <a href="test.html">Test</a>
+            <a href="top.html">Top Billboard</a>
+        </div>
+    </div>
+</header>
+
+    <!-- CONTENIDO -->
+    <section>
+        <h1>🎵 Top 10 Billboard - Marzo</h1>
+
+        <!-- TABLA -->
+        <table class="tabla-billboard">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Canción</th>
+                    <th>Artista</th>
+                    <th>Reproducciones (M)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Greedy</td>
+                    <td>Tate McRae</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lovin On Me</td>
+                    <td>Jack Harlow</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Paint The Town Red</td>
+                    <td>Doja Cat</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Flowers</td>
+                    <td>Miley Cyrus</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Cruel Summer</td>
+                    <td>Taylor Swift</td>
+                    <td>70</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📊 Reproducciones del Mes</h2>
+
+        <!-- GRAFICA -->
+        <div class="grafica-container">
+        <canvas id="graficaBillboard"></canvas>
+        </div>
+    </section>
+
+    <!-- SCRIPT GRAFICA -->
+<script>
+const ctx = document.getElementById('graficaBillboard');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            'Greedy',
+            'Lovin On Me',
+            'Paint The Town Red',
+            'Flowers',
+            'Cruel Summer'
+        ],
+        datasets: [{
+        label: 'Reproducciones en millones',
+        data: [95, 88, 82, 75, 70],
+        backgroundColor: 'rgba(30, 144, 255, 0.6)', // Azul Melodify con transparencia
+        borderColor: '#1E90FF', // Azul sólido
+        borderWidth: 2,
+        borderRadius: 10, // Barras redondeadas (se ve más moderno)
+        hoverBackgroundColor: '#187bcd'
+      }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 0,
+                max: 100,
+                ticks: {
+                    stepSize: 10
+                }
+            }
+        }
+    }
+});
+</script>
+<script>
+const menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+
+menuBtn.addEventListener("click", () => {
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+});
+</script>
+    <footer>
+        <p>    © 2026 Melodify | Portal Musical Educativo</p>
+    </footer>
+</body>
+</html>

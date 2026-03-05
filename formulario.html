@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario - Melodify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <span class="icono">🎵</span>
+        Melo<span>dif</span>y
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="generos.html">Géneros</a>
+            <a href="test.html">Test</a>
+            <a href="top.html">Top Billboard</a>
+        </div>
+    </div>
+</header>
+
+<section class="form-section">
+    <div class="tarjeta-genero formulario-card">
+        <img src="img/logo.png" alt="Contacto" class="img-formulario">
+        
+        <h2>Formulario de Contacto</h2>
+        <p>Envíanos tus sugerencias musicales 🎶</p>
+
+        <form onsubmit="enviarFormulario(event)">
+            <label>Nombre</label>
+            <input type="text" required>
+
+            <label>Correo electrónico</label>
+            <input type="email" required>
+
+            <label>Género favorito</label>
+            <select required>
+                <option value="">Selecciona uno</option>
+                <option>Pop</option>
+                <option>Rock</option>
+                <option>Reguetón</option>
+                <option>R&B</option>
+                <option>Electrónica</option>
+            </select>
+
+            <label>Sugerencias</label>
+            <textarea rows="3" required></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Melodify | Portal Musical Educativo
+</footer>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+function enviarFormulario(event) {
+    event.preventDefault();
+    alert("Formulario enviado correctamente ");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodify - Portal Musical</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+  <header>
+    <div class="logo">
+        <span class="icono">🎵</span>
+        Melo<span>dif</span>y
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="generos.html">Géneros</a>
+            <a href="test.html">Test</a>
+            <a href="top.html">Top Billboard</a>
+        </div>
+    </div>
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Descubre el Universo de la Música</h1>
+        <p>Explora géneros, artistas, historia y tendencias actuales en un solo lugar.</p>
+        <a href="generos.html" class="btn">Explorar ahora</a>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="seccion-flex">
+    <div class="seccion-imagen">
+        <a href="AQUÍ_PEGA_TU_LINK_DE_YOUTUBE" target="_blank">
+            <img src="img/tu-imagen-1.jpg" alt="Video Música">
+        </a>
+    </div>
+    <div class="seccion-texto">
+        <h2>¿Qué es Melodify?</h2>
+        <p>Melodify es un portal informativo dedicado al mundo de la música. Su objetivo es brindar contenido cultural,
+            educativo y actualizado sobre la evolución musical, los géneros más influyentes, artistas destacados y tendencias actuales.
+            A través de un diseño moderno y organizado, Melodify busca acercar la música a todo tipo de público.</p>
+    </div>
+</section>
+
+<section class="seccion-flex bg-secundario">
+    <div class="seccion-imagen">
+        <a href="AQUÍ_PEGA_TU_LINK_DE_YOUTUBE" target="_blank">
+            <img src="img/tu-imagen-2.jpg" alt="Video Historia">
+        </a>
+    </div>
+    <div class="seccion-texto">
+        <h2>Origen y Evolución de la Música</h2>
+        <p>La música existe desde tiempos prehistóricos como medio de expresión y comunicación.
+            Desde rituales antiguos hasta la era digital, ha evolucionado junto con la humanidad.
+            En la actualidad, el streaming ha revolucionado la forma en que consumimos música,
+            permitiendo acceso inmediato desde cualquier parte del mundo.</p>
+    </div>
+</section>
+
+    <!-- IMPACTO -->
+    <section class="seccion-flex">
+    <div class="seccion-imagen">
+        <a href="AQUÍ_PEGA_TU_LINK_DE_YOUTUBE" target="_blank">
+            <img src="img/tu-imagen-1.jpg" alt="Video Música">
+        </a>
+    </div>
+    <div class="seccion-texto">
+        <h2>¿Qué es Melodify?</h2>
+        <p>La música influye en movimientos sociales, identidad cultural y tendencias globales.
+            Ha pasado de formatos físicos como vinilos y CD a plataformas digitales modernas,
+            transformando la industria y el acceso a los contenidos musicales.</p>
+    </div>
+</section>
+
+<section class="seccion-flex bg-secundario">
+    <div class="seccion-imagen">
+        <a href="AQUÍ_PEGA_TU_LINK_DE_YOUTUBE" target="_blank">
+            <img src="img/tu-imagen-2.jpg" alt="Video Historia">
+        </a>
+    </div>
+    <div class="seccion-texto">
+        <h2>Datos Interesantes</h2>
+        <ul>
+            <li>El pop es uno de los géneros más escuchados globalmente.</li>
+            <li>El consumo digital supera ampliamente al formato físico.</li>
+            <li>Las redes sociales influyen en la popularidad de canciones.</li>
+            <li>Los algoritmos personalizan recomendaciones musicales.</li>
+        </ul></p>
+    </div>
+</section>
+
+
+    <!-- TARJETAS DE NAVEGACIÓN -->
+    <section>
+        <h2>Explora Más</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Artistas</h3>
+                <p>Descubre perfiles, biografías y discografías.</p>
+                <a href="artistas.html" class="btn">Ver artistas</a>
+            </div>
+
+            <div class="card">
+                <h3>Géneros</h3>
+                <p>Explora estilos musicales y su historia.</p>
+                <a href="generos.html" class="btn">Ver géneros</a>
+            </div>
+
+            <div class="card">
+                <h3>Test Musical</h3>
+                <p>Descubre tu estilo musical ideal.</p>
+                <a href="test.html" class="btn">Hacer test</a>
+            </div>
+
+            <div class="card">
+                <h3>Top Billboard</h3>
+                <p>Consulta las canciones y artistas más populares.</p>
+                <a href="top.html" class="btn">Ver ranking</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>    © 2026 Melodify | Portal Musical Educativo</p>
+    </footer>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+</body>
+</html>
