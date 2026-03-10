@@ -562,11 +562,8 @@ footer{
     .perfil-header{
         flex-direction:column;
         text-align:center;
-    }
-    html {
-  scroll-behavior: smooth;
+    }     
 }
-
-    
-    
+html {
+  scroll-behavior: smooth;
 }
