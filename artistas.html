@@ -2,81 +2,167 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Artistas - Melodify</title>
+    <title>Artistas - Melodify</title> <!-- Título específico de esta página dentro del portal -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Permite que la página se adapte correctamente en celulares -->
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta este archivo HTML con el archivo CSS donde está el diseño -->
 </head>
 
 <body>
 
+<!-- ================= HEADER (REUTILIZADO DEL SITIO) ================= -->
+<!-- Este header es el mismo que el de la página principal para mantener navegación consistente -->
+
 <header>
+
     <div class="logo">
         <span class="icono">🎵</span>
         Melo<span>dif</span>y
     </div>
 
+    <!-- Contenedor del menú desplegable -->
     <div class="menu-container">
+
+        <!-- Botón que activa el menú en dispositivos pequeños -->
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+        <!-- Menú de navegación del sitio -->
         <div class="menu" id="menu">
+
+            <!-- Enlaces internos hacia otras páginas del proyecto -->
             <a href="index.html">Inicio</a>
             <a href="artistas.html">Artistas</a>
             <a href="generos.html">Géneros</a>
             <a href="test.html">Test</a>
             <a href="top.html">Top Billboard</a>
+
         </div>
     </div>
+
 </header>
 
-<section>
-    <h2>Artistas Destacados</h2>
 
+<!-- ================= SECCIÓN DE ARTISTAS ================= -->
+
+<section>
+
+    <h2>Artistas Destacados</h2>
+    <!-- Título de la sección donde se muestran artistas -->
+
+    <!-- Contenedor que usa CSS Grid para organizar las tarjetas -->
     <div class="grid">
 
+        <!-- ===== TARJETA DE ARTISTA ===== -->
         <div class="card">
+
+            <!-- Imagen del artista -->
             <img src="img/olivia.jpg" alt="Olivia Rodrigo" class="artista-img">
+            <!-- class="artista-img" aplica estilos específicos para imágenes de artistas -->
+
             <h3>Olivia Rodrigo</h3>
-            <p>Cantante y compositora estadounidense reconocida por su estilo pop alternativo.</p>
+            <!-- Nombre del artista -->
+
+            <p>
+            Cantante y compositora estadounidense reconocida por su estilo pop alternativo.
+            </p>
+            <!-- Breve descripción del artista -->
+
             <a href="olivia.html" class="btn">Ver perfil</a>
+            <!-- Enlace que dirige a una página individual del artista -->
+
         </div>
 
+
+        <!-- ===== TARJETA DE ARTISTA ===== -->
         <div class="card">
+
             <img src="img/bad-bunny.jpg" alt="Bad Bunny" class="artista-img">
+
             <h3>Bad Bunny</h3>
-            <p>Uno de los mayores exponentes del reguetón y la música urbana latina.</p>
+
+            <p>
+            Uno de los mayores exponentes del reguetón y la música urbana latina.
+            </p>
+
             <a href="#" class="btn">Ver perfil</a>
+            <!-- href="#" es un enlace temporal (placeholder) que no dirige a otra página todavía -->
+
         </div>
 
+
+        <!-- ===== TARJETA DE ARTISTA ===== -->
         <div class="card">
+
             <img src="img/taylor.jpg" alt="Taylor Swift" class="artista-img">
+
             <h3>Taylor Swift</h3>
-            <p>Artista internacional conocida por su evolución del country al pop global.</p>
+
+            <p>
+            Artista internacional conocida por su evolución del country al pop global.
+            </p>
+
             <a href="taylor.html" class="btn">Ver perfil</a>
+            <!-- Enlace a la página de perfil del artista -->
+
         </div>
 
+
+        <!-- ===== TARJETA DE ARTISTA ===== -->
         <div class="card">
+
             <img src="img/theweeknd.jpg" alt="The Weeknd" class="artista-img">
+
             <h3>The Weeknd</h3>
-            <p>Cantante canadiense famoso por su estilo R&B moderno y synthpop.</p>
+
+            <p>
+            Cantante canadiense famoso por su estilo R&B moderno y synthpop.
+            </p>
+
             <a href="#" class="btn">Ver perfil</a>
+            <!-- Enlace temporal mientras se crea la página del artista -->
+
         </div>
 
     </div>
 </section>
 
+
+<!-- ================= FOOTER ================= -->
+<!-- Pie de página con información general del sitio -->
+
 <footer>
     © 2026 Melodify | Portal Musical Educativo
 </footer>
 
+
+<!-- ================= JAVASCRIPT ================= -->
+<!-- Script que controla la apertura y cierre del menú -->
+
 <script>
+
 function toggleMenu() {
+
     var menu = document.getElementById("menu");
+    // Obtiene el elemento HTML que tiene el id "menu"
+
     if (menu.style.display === "block") {
+        // Si el menú está visible
+
         menu.style.display = "none";
+        // Lo oculta
+
     } else {
+
         menu.style.display = "block";
+        // Lo muestra
+
     }
+
 }
+
 </script>
 
 </body>
