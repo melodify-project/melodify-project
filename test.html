@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Test de Estilo Musical | Melodify</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta el archivo CSS donde está el diseño del sitio -->
 </head>
+
 <body>
 
 <header>
+
     <div class="logo">
         <span class="icono">🎵</span>
         Melo<span>dif</span>y
     </div>
 
     <div class="menu-container">
+
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
         <div class="menu" id="menu">
             <a href="index.html">Inicio</a>
             <a href="artistas.html">Artistas</a>
@@ -22,132 +29,313 @@
             <a href="test.html">Test</a>
             <a href="top.html">Top Billboard</a>
         </div>
+
     </div>
+
 </header>
 
+
 <main>
-    <section class="test">
-        <h1>🎵 Descubre tu Estilo Musical</h1>
-        <p>Responde las preguntas y te diremos tu género favorito y un artista que podría gustarte.</p>
 
-        <form id="musicalTest" class="formulario" onsubmit="calcularResultado(event)">
+<section class="test">
 
-            <!-- 1. Emociones y personalidad -->
-            <h2>1. Sobre emociones y personalidad al escuchar música</h2>
-            <label>¿Qué te gusta sentir cuando escuchas música?</label>
-            <select required name="emocion">
-                <option value="">Selecciona una opción</option>
-                <option value="pop">Feliz y motivado</option>
-                <option value="relax">Tranquilo</option>
-                <option value="rock">Profundo o sentimental</option>
-                <option value="kpop">Energético</option>
-                <option value="rap">Rebelde o intenso</option>
-            </select>
+<h1>🎵 Descubre tu Estilo Musical</h1>
 
-            <label>¿La música que escuchas suele ser?</label>
-            <select required name="tipo">
-                <option value="">Selecciona una opción</option>
-                <option value="pop">Para bailar</option>
-                <option value="relax">Para pensar</option>
-                <option value="relax">Para relajarme</option>
-                <option value="kpop">Para cantar</option>
-                <option value="rap">Para hacer tareas</option>
-            </select>
+<p>
+Responde las preguntas y te diremos tu género favorito 
+y un artista que podría gustarte.
+</p>
 
-            <!-- 2. Ritmo y sonido -->
-            <h2>2. Sobre ritmo y sonido</h2>
-            <label>Prefieres canciones…</label>
-            <select required name="ritmo">
-                <option value="">Selecciona una opción</option>
-                <option value="relax">Lentas</option>
-                <option value="kpop">Con ritmo fuerte</option>
-                <option value="pop">Mixto</option>
-                <option value="rock">No sé, solo que suene bien</option>
-            </select>
 
-            <label>¿Te gustan más los instrumentos o los efectos electrónicos?</label>
-            <select required name="instrumentos">
-                <option value="">Selecciona una opción</option>
-                <option value="rock">Instrumentos</option>
-                <option value="pop">Efectos electrónicos</option>
-                <option value="kpop">Ambos</option>
-            </select>
+<!-- ================= FORMULARIO DEL TEST ================= -->
 
-            <!-- 3. Situación al escuchar música -->
-            <h2>3. Sobre situación al escuchar música</h2>
-            <label>¿Cuándo escuchas música?</label>
-            <select required name="situacion">
-                <option value="">Selecciona una opción</option>
-                <option value="relax">Estudiando</option>
-                <option value="pop">En el transporte</option>
-                <option value="relax">Antes de dormir</option>
-                <option value="kpop">Haciendo ejercicio</option>
-                <option value="pop">Todo el tiempo</option>
-            </select>
+<form id="musicalTest" class="formulario" onsubmit="calcularResultado(event)">
+<!-- id permite identificar el formulario en JavaScript -->
 
-            <!-- 4. Voces y estilo de artistas -->
-            <h2>4. Sobre voces y estilo de artistas</h2>
-            <label>Prefieres cantantes…</label>
-            <select required name="voz">
-                <option value="">Selecciona una opción</option>
-                <option value="relax">Voz suave</option>
-                <option value="pop">Voz potente</option>
-                <option value="rap">Rap / habla rápido</option>
-                <option value="kpop">No tengo preferencia</option>
-            </select>
 
-            <label>¿Te gusta más música en español o en inglés?</label>
-            <select required name="idioma">
-                <option value="">Selecciona una opción</option>
-                <option value="pop">Español</option>
-                <option value="kpop">Inglés</option>
-                <option value="relax">Ambos</option>
-            </select>
+<!-- 1. EMOCIONES -->
 
-            <!-- 5. Actitud musical -->
-            <h2>5. Sobre actitud musical</h2>
-            <label>¿Qué tipo de canciones disfrutas más?</label>
-            <select required name="actitud">
-                <option value="">Selecciona una opción</option>
-                <option value="pop">Románticas</option>
-                <option value="rock">Oscuras o profundas</option>
-                <option value="pop">Pop populares</option>
-                <option value="rock">Rock</option>
-                <option value="kpop">K-pop</option>
-                <option value="rap">Rap / urbano</option>
-            </select>
+<h2>1. Sobre emociones y personalidad al escuchar música</h2>
 
-            <button type="submit" class="btn">Ver mi resultado 🎶</button>
+<label>¿Qué te gusta sentir cuando escuchas música?</label>
 
-        </form>
+<select required name="emocion">
+<!-- name permite identificar la respuesta dentro del formulario -->
 
-        <div id="resultado" style="text-align:center; margin-top:30px;"></div>
+<option value="">Selecciona una opción</option>
 
-    </section>
+<option value="pop">Feliz y motivado</option>
+<option value="relax">Tranquilo</option>
+<option value="rock">Profundo o sentimental</option>
+<option value="kpop">Energético</option>
+<option value="rap">Rebelde o intenso</option>
+
+</select>
+
+
+<label>¿La música que escuchas suele ser?</label>
+
+<select required name="tipo">
+
+<option value="">Selecciona una opción</option>
+
+<option value="pop">Para bailar</option>
+<option value="relax">Para pensar</option>
+<option value="relax">Para relajarme</option>
+<option value="kpop">Para cantar</option>
+<option value="rap">Para hacer tareas</option>
+
+</select>
+
+
+<!-- 2. RITMO -->
+
+<h2>2. Sobre ritmo y sonido</h2>
+
+<label>Prefieres canciones…</label>
+
+<select required name="ritmo">
+
+<option value="">Selecciona una opción</option>
+
+<option value="relax">Lentas</option>
+<option value="kpop">Con ritmo fuerte</option>
+<option value="pop">Mixto</option>
+<option value="rock">No sé, solo que suene bien</option>
+
+</select>
+
+
+<label>¿Te gustan más los instrumentos o los efectos electrónicos?</label>
+
+<select required name="instrumentos">
+
+<option value="">Selecciona una opción</option>
+
+<option value="rock">Instrumentos</option>
+<option value="pop">Efectos electrónicos</option>
+<option value="kpop">Ambos</option>
+
+</select>
+
+
+<!-- 3. SITUACIÓN -->
+
+<h2>3. Sobre situación al escuchar música</h2>
+
+<label>¿Cuándo escuchas música?</label>
+
+<select required name="situacion">
+
+<option value="">Selecciona una opción</option>
+
+<option value="relax">Estudiando</option>
+<option value="pop">En el transporte</option>
+<option value="relax">Antes de dormir</option>
+<option value="kpop">Haciendo ejercicio</option>
+<option value="pop">Todo el tiempo</option>
+
+</select>
+
+
+<!-- 4. VOCES -->
+
+<h2>4. Sobre voces y estilo de artistas</h2>
+
+<label>Prefieres cantantes…</label>
+
+<select required name="voz">
+
+<option value="">Selecciona una opción</option>
+
+<option value="relax">Voz suave</option>
+<option value="pop">Voz potente</option>
+<option value="rap">Rap / habla rápido</option>
+<option value="kpop">No tengo preferencia</option>
+
+</select>
+
+
+<label>¿Te gusta más música en español o en inglés?</label>
+
+<select required name="idioma">
+
+<option value="">Selecciona una opción</option>
+
+<option value="pop">Español</option>
+<option value="kpop">Inglés</option>
+<option value="relax">Ambos</option>
+
+</select>
+
+
+<!-- 5. ACTITUD -->
+
+<h2>5. Sobre actitud musical</h2>
+
+<label>¿Qué tipo de canciones disfrutas más?</label>
+
+<select required name="actitud">
+
+<option value="">Selecciona una opción</option>
+
+<option value="pop">Románticas</option>
+<option value="rock">Oscuras o profundas</option>
+<option value="pop">Pop populares</option>
+<option value="rock">Rock</option>
+<option value="kpop">K-pop</option>
+<option value="rap">Rap / urbano</option>
+
+</select>
+
+
+<button type="submit" class="btn">
+Ver mi resultado 🎶
+</button>
+
+</form>
+
+
+<!-- AQUÍ APARECERÁ EL RESULTADO -->
+
+<div id="resultado" style="text-align:center; margin-top:30px;"></div>
+<!-- innerHTML insertará aquí el resultado del test -->
+
+</section>
+
 </main>
 
+
 <script>
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+
+function toggleMenu(){
+
+const menu = document.getElementById('menu');
+
+menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+/*
+operador ternario:
+si el menú está visible lo oculta
+si está oculto lo muestra
+*/
+
 }
 
-function calcularResultado(event) {
-    event.preventDefault();
 
-    const form = event.target;
+function calcularResultado(event){
 
-    // Contar la mayoría de respuestas
-    const respuestas = [
-        form.emocion.value,
-        form.tipo.value,
-        form.ritmo.value,
-        form.instrumentos.value,
-        form.situacion.value,
-        form.voz.value,
-        form.idioma.value,
-        form.actitud.value
-    ];
+event.preventDefault();
+/* evita que el formulario recargue la página */
+
+const form = event.target;
+/* obtiene el formulario que se envió */
+
+
+// ================= RESPUESTAS DEL USUARIO =================
+
+const respuestas = [
+
+form.emocion.value,
+form.tipo.value,
+form.ritmo.value,
+form.instrumentos.value,
+form.situacion.value,
+form.voz.value,
+form.idioma.value,
+form.actitud.value
+
+];
+/*
+Se guardan todas las respuestas en un arreglo
+(array) para poder analizarlas
+*/
+
+
+// ================= CONTAR RESPUESTAS =================
+
+const conteo = {};
+/*
+Se crea un objeto vacío donde se contará
+cuántas veces aparece cada género
+*/
+
+
+respuestas.forEach(r => {
+
+if(conteo[r]) conteo[r]++;
+else conteo[r] = 1;
+
+/*
+forEach recorre cada respuesta
+y suma cuántas veces aparece cada género
+*/
+
+});
+
+
+// ================= ENCONTRAR EL GÉNERO MÁS REPETIDO =================
+
+let max = 0;
+let generoFavorito = '';
+
+for(let g in conteo){
+
+if(conteo[g] > max){
+
+max = conteo[g];
+generoFavorito = g;
+
+}
+
+}
+/*
+for...in recorre las propiedades del objeto conteo
+y encuentra cuál género tiene más votos
+*/
+
+
+// ================= ARTISTA SUGERIDO =================
+
+const artistas = {
+
+pop: "Taylor Swift",
+rock: "Imagine Dragons",
+kpop: "BTS",
+rap: "Kendrick Lamar",
+relax: "Ed Sheeran"
+
+};
+/*
+Objeto que relaciona cada género con un artista recomendado
+*/
+
+
+// ================= MOSTRAR RESULTADO =================
+
+const resultadoDiv = document.getElementById("resultado");
+
+resultadoDiv.innerHTML = `
+<h2>🎵 Tu género favorito es: ${generoFavorito.toUpperCase()}</h2>
+<p>Un artista que podría gustarte: ${artistas[generoFavorito]}</p>
+`;
+/*
+innerHTML permite insertar HTML dentro de un elemento
+toUpperCase convierte el texto a mayúsculas
+*/
+
+}
+
+</script>
+
+
+<footer>
+
+<p>© 2026 Melodify | Portal Musical Educativo</p>
+
+</footer>
+
+</body>
+</html>    ];
 
     const conteo = {};
     respuestas.forEach(r => {
