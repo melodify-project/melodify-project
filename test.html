@@ -336,44 +336,4 @@ toUpperCase convierte el texto a mayúsculas
 </footer>
 
 </body>
-</html>    ];
-
-    const conteo = {};
-    respuestas.forEach(r => {
-        if(conteo[r]) conteo[r]++;
-        else conteo[r] = 1;
-    });
-
-    // Obtener el género con más votos
-    let max = 0;
-    let generoFavorito = '';
-    for(let g in conteo){
-        if(conteo[g] > max){
-            max = conteo[g];
-            generoFavorito = g;
-        }
-    }
-
-    // Sugerir un artista según el género
-    const artistas = {
-        pop: "Taylor Swift",
-        rock: "Imagine Dragons",
-        kpop: "BTS",
-        rap: "Kendrick Lamar",
-        relax: "Ed Sheeran"
-    };
-
-    const resultadoDiv = document.getElementById("resultado");
-    resultadoDiv.innerHTML = `
-        <h2>🎵 Tu género favorito es: ${generoFavorito.toUpperCase()}</h2>
-        <p>Un artista que podría gustarte: ${artistas[generoFavorito]}</p>
-    `;
-}
-</script>
-
-    <footer>
-        <p>    © 2026 Melodify | Portal Musical Educativo</p>
-    </footer>
-    
-</body>
-</html>
+</html> 
