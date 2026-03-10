@@ -2,20 +2,31 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <title>Top Billboard</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta el archivo de estilos CSS -->
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Importa la librería Chart.js desde internet para crear gráficas -->
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
+
+<!-- ================= NAVBAR ================= -->
+
 <header>
+
     <div class="logo">
         <span class="icono">🎵</span>
         Melo<span>dif</span>y
     </div>
 
     <div class="menu-container">
+
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
         <div class="menu" id="menu">
@@ -25,118 +36,249 @@
             <a href="test.html">Test</a>
             <a href="top.html">Top Billboard</a>
         </div>
+
     </div>
+
 </header>
 
-    <!-- CONTENIDO -->
-    <section>
-        <h1>🎵 Top 10 Billboard - Marzo</h1>
 
-        <!-- TABLA -->
-        <table class="tabla-billboard">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Canción</th>
-                    <th>Artista</th>
-                    <th>Reproducciones (M)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Greedy</td>
-                    <td>Tate McRae</td>
-                    <td>95</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Lovin On Me</td>
-                    <td>Jack Harlow</td>
-                    <td>88</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Paint The Town Red</td>
-                    <td>Doja Cat</td>
-                    <td>82</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Flowers</td>
-                    <td>Miley Cyrus</td>
-                    <td>75</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Cruel Summer</td>
-                    <td>Taylor Swift</td>
-                    <td>70</td>
-                </tr>
-            </tbody>
-        </table>
 
-        <h2>📊 Reproducciones del Mes</h2>
+<!-- ================= CONTENIDO ================= -->
 
-        <!-- GRAFICA -->
-        <div class="grafica-container">
-        <canvas id="graficaBillboard"></canvas>
-        </div>
-    </section>
+<section>
 
-    <!-- SCRIPT GRAFICA -->
+<h1>🎵 Top 10 Billboard - Marzo</h1>
+
+
+<!-- ================= TABLA ================= -->
+
+<table class="tabla-billboard">
+<!-- table crea una tabla de datos -->
+
+<thead>
+<!-- thead contiene el encabezado de la tabla -->
+
+<tr>
+<!-- tr significa "table row" (fila de la tabla) -->
+
+<th>#</th>
+<th>Canción</th>
+<th>Artista</th>
+<th>Reproducciones (M)</th>
+<!-- th significa "table header" (celda de encabezado) -->
+
+</tr>
+
+</thead>
+
+
+<tbody>
+<!-- tbody contiene los datos principales de la tabla -->
+
+<tr>
+<td>1</td>
+<td>Greedy</td>
+<td>Tate McRae</td>
+<td>95</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Lovin On Me</td>
+<td>Jack Harlow</td>
+<td>88</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Paint The Town Red</td>
+<td>Doja Cat</td>
+<td>82</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Flowers</td>
+<td>Miley Cyrus</td>
+<td>75</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Cruel Summer</td>
+<td>Taylor Swift</td>
+<td>70</td>
+</tr>
+
+</tbody>
+
+</table>
+
+
+<h2>📊 Reproducciones del Mes</h2>
+
+
+<!-- ================= CONTENEDOR DE LA GRAFICA ================= -->
+
+<div class="grafica-container">
+
+<canvas id="graficaBillboard"></canvas>
+<!-- canvas es un espacio donde JavaScript puede dibujar gráficos -->
+
+</div>
+
+</section>
+
+
+
+<!-- ================= SCRIPT DE LA GRAFICA ================= -->
+
 <script>
+
 const ctx = document.getElementById('graficaBillboard');
+/*
+Obtiene el canvas donde se dibujará la gráfica
+*/
+
 
 new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: [
-            'Greedy',
-            'Lovin On Me',
-            'Paint The Town Red',
-            'Flowers',
-            'Cruel Summer'
-        ],
-        datasets: [{
-        label: 'Reproducciones en millones',
-        data: [95, 88, 82, 75, 70],
-        backgroundColor: 'rgba(30, 144, 255, 0.6)', // Azul Melodify con transparencia
-        borderColor: '#1E90FF', // Azul sólido
-        borderWidth: 2,
-        borderRadius: 10, // Barras redondeadas (se ve más moderno)
-        hoverBackgroundColor: '#187bcd'
-      }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            y: {
-                min: 0,
-                max: 100,
-                ticks: {
-                    stepSize: 10
-                }
-            }
-        }
-    }
+/*
+Chart es la función de la librería Chart.js
+que crea una gráfica
+*/
+
+type: 'bar',
+/* tipo de gráfica: bar = gráfica de barras */
+
+
+data: {
+
+labels: [
+'Greedy',
+'Lovin On Me',
+'Paint The Town Red',
+'Flowers',
+'Cruel Summer'
+],
+/*
+labels son las etiquetas del eje X
+(en este caso los nombres de las canciones)
+*/
+
+
+datasets: [{
+/*
+datasets contiene los datos que se mostrarán
+en la gráfica
+*/
+
+label: 'Reproducciones en millones',
+
+data: [95, 88, 82, 75, 70],
+/*
+valores numéricos de cada canción
+*/
+
+backgroundColor: 'rgba(30, 144, 255, 0.6)',
+/*
+color de las barras con transparencia
+*/
+
+borderColor: '#1E90FF',
+/*
+color del borde de las barras
+*/
+
+borderWidth: 2,
+/* grosor del borde */
+
+borderRadius: 10,
+/* hace que las barras sean redondeadas */
+
+hoverBackgroundColor: '#187bcd'
+/* color cuando pasas el mouse sobre la barra */
+
+}]
+
+},
+
+
+options: {
+
+responsive: true,
+/*
+la gráfica se adapta al tamaño de la pantalla
+*/
+
+maintainAspectRatio: false,
+/*
+permite que el contenedor controle el tamaño
+de la gráfica
+*/
+
+scales: {
+
+y: {
+
+min: 0,
+max: 100,
+/*
+define el rango del eje vertical
+*/
+
+ticks: {
+
+stepSize: 10
+/*
+cada cuánto aparecen las marcas del eje
+*/
+
+}
+
+}
+
+}
+
+}
+
 });
+
 </script>
+
+
+
+<!-- ================= SCRIPT DEL MENÚ ================= -->
+
 <script>
+
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 
 menuBtn.addEventListener("click", () => {
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
+
+if (menu.style.display === "block") {
+
+menu.style.display = "none";
+
+} else {
+
+menu.style.display = "block";
+
+}
+
 });
+
 </script>
-    <footer>
-        <p>    © 2026 Melodify | Portal Musical Educativo</p>
-    </footer>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>© 2026 Melodify | Portal Musical Educativo</p>
+
+</footer>
+
 </body>
 </html>
